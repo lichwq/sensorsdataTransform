@@ -49,14 +49,14 @@ public class Area {
     }
 
     /**
-    * 通过 areaId 来获取 不同的filed数据
+    * 通过 areaId 来获取 不同的filed数据, 如果获取失败了，就报警通知，通常来说，这个是肯定可以获取到的
     *
     * */
-    public String getFiled(String AreaId, String filedName) {
+    public String getFiled(String areaId, String filedName) {
 
         String res = "NULL";
-        if (null == AreaId || null == filedName) {
-            LOG.error(String.format("the input is not valid, AreaIdd: %s, filedName: %s ", AreaId, filedName));
+        if (null == areaId || null == filedName) {
+            LOG.error(String.format("the input is not valid, AreaIdd: %s, filedName: %s ", areaId, filedName));
             return res;
         }
 
@@ -69,10 +69,13 @@ public class Area {
         Integer AreaIdIndex = areaMappingHead.get(AREA_ID);
 
         for (String[] arr : areaMapping) {
-            if (arr[AreaIdIndex].equals(AreaId)) {
+            if (arr[AreaIdIndex].equals(areaId)) {
                 return arr[filedIndex];
             }
         }
+
+        String errInfo = String.format("Can not get the areaMapping info of areaId %s", areaId);
+        LOG.error(errInfo);
         return res;
     }
 

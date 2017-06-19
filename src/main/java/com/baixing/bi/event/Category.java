@@ -67,6 +67,7 @@ public class Category {
 
         String[] arr = categoryMapping.get(categoryNameEn);
         if (null == arr) {
+            LOG.error("Can not get the categoryInfo of categoryEn: " + categoryNameEn);
             return res;
         } else {
             return arr[num];

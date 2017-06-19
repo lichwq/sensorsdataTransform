@@ -55,7 +55,7 @@ scp target/sensorsdataTransform-1.0-SNAPSHOT.jar deploy@sha2hb08:/home/deploy/zh
 1. 在 sha2hb08:18080 上停止掉对应的topology
 2. 登录 deploy@sha2hb08:/home/deploy/zhangjiali/ 
 3. 运行 
+
 ```java
  storm jar sensorsdataTransform-1.0-SNAPSHOT.jar com.baixing.bi.topology.MoutanTopology
-
 ```
