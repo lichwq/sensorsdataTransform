@@ -30,7 +30,7 @@ public class MoutanTopology {
     public static void main(String[] args) throws InterruptedException, InvalidTopologyException, AuthorizationException,
             AlreadyAliveException {
         // online 为线上模式, dev 为开发模式
-        String mode = "online";
+        String mode = "test";
 
         ProjectProperties projectProperties = new ProjectProperties();
         projectProperties.loadProperties("moutan", mode);
@@ -56,7 +56,7 @@ public class MoutanTopology {
         if (mode.equals("dev")) {
             tp.setBolt("moutan_print", new MoutanPrint()).shuffleGrouping("moutan_transform");
 
-        } else if (mode.equals("online")) {
+        } else if (mode.equals("online") || mode.equals("test")) {
             Properties props = new Properties();
             props.put("bootstrap.servers", bootstrapServers);
             props.put("acks", "1");
@@ -79,7 +79,7 @@ public class MoutanTopology {
         conf.put(AREA_MAPPING_FILE,  projectProperties.getProperty("areMappingFile"));
         conf.put(SENSOR_DATA_PROJECT,  projectProperties.getProperty("sensorDataProject"));
 
-        if (mode.equals("dev")) {
+        if (mode.equals("dev") || mode.equals("test")) {
 
             LocalCluster cluster = new LocalCluster();
             cluster.submitTopology(projectProperties.getProperty("stormTopologyName"), conf, tp.createTopology());

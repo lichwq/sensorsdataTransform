@@ -1,3 +1,5 @@
+package com.baixng.bi.event;
+
 import com.baixing.bi.event.Area;
 import org.junit.Assert;
 import org.junit.Test;
@@ -32,7 +34,7 @@ public class AreaTest {
 
     @Test
     public void testShengCnNotExists() {
-        Assert.assertEquals(area.getFiled("m6111519","shengCn"), "NULL");
+        Assert.assertEquals(area.getFiled("m3140","shengCn"), "NULL");
     }
 
     @Test

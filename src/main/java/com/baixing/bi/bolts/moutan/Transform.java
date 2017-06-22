@@ -2,6 +2,9 @@ package com.baixing.bi.bolts.moutan;
 
 import com.baixing.bi.event.Event;
 import com.baixing.bi.event.SensorInput;
+import com.baixing.bi.transform.moutan.KeyNameTransform;
+import com.baixing.bi.transform.moutan.SensorKeepedKey;
+import com.baixing.bi.transform.moutan.ValueTypeTransform;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -12,7 +15,6 @@ import org.apache.storm.tuple.Values;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,13 +29,11 @@ import static com.baixing.bi.event.Constant.SENSOR_DATA_PROJECT;
 public class Transform extends BaseRichBolt {
     private static final Logger LOG = LoggerFactory.getLogger(Transform.class);
     private OutputCollector collector;
-    /**
-     * The Senseor keep filed.
-     */
-    private static HashMap<String, String> senseorKeepFiled;
-    private static HashMap<String, String> covertType;
-    private static String project = "";
 
+    private static String project = "";
+    private  KeyNameTransform keyNameTransform;
+    private  SensorKeepedKey sensorKeepedKey;
+    private  ValueTypeTransform valueTypeTransform;
 
     /**
      * Gets distinct id, 如果有bxUserId 使用bxUserId，如果没有，使用trackId
@@ -47,37 +47,6 @@ public class Transform extends BaseRichBolt {
         return (String)res;
     }
 
-
-    /**
-     * 获取神策的保留字段，具体见神策的官方文档。
-     *
-     */
-    private void prepareSensorKeepFiled() {
-        senseorKeepFiled = new HashMap<String, String>();
-        senseorKeepFiled.put("url", "$url");
-        senseorKeepFiled.put("ip", "$ip");
-        senseorKeepFiled.put("ua", "$user_agent");
-    }
-
-
-    /**
-     * 按照业务需要，将一部分数据转换为number，将一部分数据转换为字符串
-     */
-
-    private void covertType() {
-        covertType = new HashMap<String, String>();
-        covertType.put("days", "number");
-        covertType.put("pageNum", "number");
-        covertType.put("price", "number");
-        covertType.put("quotaRemain", "number");
-        covertType.put("isPV", "string");
-        covertType.put("isAjax", "string");
-        covertType.put("isEdit", "string");
-        covertType.put("orderId", "string");
-        covertType.put("errorCode", "string");
-    }
-
-
     /**
      * 转化为神策的所需的字段
      *
@@ -86,28 +55,34 @@ public class Transform extends BaseRichBolt {
      */
     public Map<Object, Object> getSensorProperties(Event event) {
         Map<Object, Object> properties = new HashMap<Object, Object>();
+        String et = event.getField("action") != null ? event.getField("action").toString() : "";
         HashMap<Object, Object> msg = (HashMap<Object, Object>) event.getMsg();
         for (Object o : msg.entrySet()) {
             Map.Entry entry = (Map.Entry) o;
             Object key = entry.getKey();
             Object val = entry.getValue();
+
+            Object newKey = key;
+            Object newValue = val;
+
             // 神策的保留字段
-            if (senseorKeepFiled.containsKey(key)) {
-                properties.put(senseorKeepFiled.get(key), val);
-            } else {
-                properties.put(key, val);
+            if (sensorKeepedKey.containsKey(key)) {
+                newKey = sensorKeepedKey.get(key);
             }
 
-            // 根据业务需要转换的字段
-            if (covertType.containsKey(key) && val != null) {
-
-                String type = covertType.get(key);
-                if (type.equals("number")) {
-                    properties.put(key, new BigDecimal(val.toString()));
-                } else if (type.equals("string")) {
-                    properties.put(key, val.toString());
-                }
+            // 转换value 的类型
+            String newValueType = valueTypeTransform.getValueType(key);
+            if (null != newValueType) {
+                newValue = valueTypeTransform.covertValueType(val, newValueType);
             }
+
+            //转换字段名
+            Object newKeyName = keyNameTransform.getCoverType(et, key);
+            if (null != newKeyName) {
+                newKey = newKeyName;
+            }
+
+            properties.put(newKey, newValue);
 
         }
 
@@ -159,8 +134,9 @@ public class Transform extends BaseRichBolt {
     public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
         this.collector = collector;
         project = stormConf.get(SENSOR_DATA_PROJECT).toString();
-        prepareSensorKeepFiled();
-        covertType();
+        keyNameTransform = new KeyNameTransform();
+        sensorKeepedKey = new SensorKeepedKey();
+        valueTypeTransform = new ValueTypeTransform();
 
     }
 

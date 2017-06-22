@@ -3,8 +3,8 @@
 select
     a.id,
     a.areaCn,
-    b.city_name_cn,
-    b.sheng_name_cn
+    b.city_name_cn as cityCn,
+    b.sheng_name_cn as shengCn
 from
 (
 select
@@ -13,7 +13,9 @@ select
 	get_json_object(json,'$.cityEnglishName') as cityEn
 from ods.dim_data
 where
-     get_json_object(json,'$.type') = 'area2'
+     (get_json_object(json,'$.type') = 'area2' or get_json_object(json,'$.type') = 'area3')
+and
+    id is not null and areaCn is not null and cityEn is not null
 ) a
 left join
 (
@@ -25,10 +27,7 @@ from
     onetruehive.d_01_city
 ) b
 on a.cityEn = b.city_name_en
-;
-
--- 获取城市
-
+union
 select
     get_json_object(json,'$._id') as id,
     get_json_object(json,'$.name') as areaCn,

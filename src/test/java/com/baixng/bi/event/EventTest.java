@@ -1,3 +1,5 @@
+package com.baixng.bi.event;
+
 import com.baixing.bi.event.Event;
 import org.junit.Test;
 
