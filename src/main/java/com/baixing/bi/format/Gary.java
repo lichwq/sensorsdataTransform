@@ -1,4 +1,4 @@
-package com.baixing.bi.event;
+package com.baixing.bi.format;
 
 import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang3.StringUtils;

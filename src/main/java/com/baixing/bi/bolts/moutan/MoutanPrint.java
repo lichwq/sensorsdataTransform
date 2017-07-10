@@ -1,6 +1,6 @@
 package com.baixing.bi.bolts.moutan;
 
-import com.baixing.bi.event.SensorInput;
+import com.baixing.bi.format.SensorInput;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;

@@ -1,4 +1,4 @@
-package com.baixing.bi.event;
+package com.baixing.bi.mapping;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,7 +38,8 @@ public class City {
                 String[] arr = str.split(DELIMITER);
                 cityMapping.add(arr);
             }
-
+            reader.close();
+            fileReader.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

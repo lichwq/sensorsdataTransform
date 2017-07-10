@@ -18,7 +18,7 @@
               <transformers>
                 <transformer />
                 <transformer>
-                  <mainClass>com.baixing.bi.topology.GaryTopology</mainClass>
+                  <mainClass>${moutan.mainClass}</mainClass>
                 </transformer>
               </transformers>
             </configuration>
@@ -46,27 +46,63 @@
         </configuration>
       </plugin>
       <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <configuration>
-          <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
-          <archive>
-            <manifest>
-              <mainClass>com.baixing.bi.topology.GaryTopology</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-      <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
         </configuration>
       </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <overwrite>true</overwrite>
+              <outputDirectory>target/classes</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>conf/${project.name}/${package.environment}</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
+  <profiles>
+    <profile>
+      <id>moutan-dev</id>
+      <properties>
+        <project.name>moutan</project.name>
+        <moutan.mainClass>com.baixing.bi.topology.MoutanTopology</moutan.mainClass>
+        <package.environment>dev</package.environment>
+      </properties>
+    </profile>
+    <profile>
+      <id>moutan-test</id>
+      <properties>
+        <project.name>moutan</project.name>
+        <moutan.mainClass>com.baixing.bi.topology.MoutanTopology</moutan.mainClass>
+        <package.environment>test</package.environment>
+      </properties>
+    </profile>
+    <profile>
+      <id>moutan-online</id>
+      <properties>
+        <project.name>moutan</project.name>
+        <moutan.mainClass>com.baixing.bi.topology.MoutanTopology</moutan.mainClass>
+        <package.environment>product</package.environment>
+      </properties>
+    </profile>
+  </profiles>
   <dependencies>
     <dependency>
       <groupId>org.apache.storm</groupId>

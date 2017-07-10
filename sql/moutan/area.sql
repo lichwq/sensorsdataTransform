@@ -1,5 +1,3 @@
--- 获取地区
-
 select
     a.id,
     a.areaCn,
@@ -14,8 +12,9 @@ select
 from ods.dim_data
 where
      (get_json_object(json,'$.type') = 'area2' or get_json_object(json,'$.type') = 'area3')
-and
-    id is not null and areaCn is not null and cityEn is not null
+and get_json_object(json,'$._id') is not null 
+and get_json_object(json,'$.name') is not null 
+and get_json_object(json,'$.cityEnglishName') is not null
 ) a
 left join
 (
@@ -37,4 +36,3 @@ from
     ods.dim_data
 where
     get_json_object(json,'$.type')  = 'city'
-;

@@ -1,4 +1,4 @@
-package com.baixing.bi.transform.moutan;
+package com.baixing.bi.format;
 
 import java.util.HashMap;
 

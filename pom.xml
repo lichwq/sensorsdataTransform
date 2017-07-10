@@ -82,6 +82,36 @@
 
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>moutan-dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <project.name>moutan</project.name>
+                <moutan.mainClass>com.baixing.bi.topology.MoutanTopology</moutan.mainClass>
+                <package.environment>dev</package.environment>
+
+            </properties>
+        </profile>
+        <profile>
+            <id>moutan-test</id>
+            <properties>
+                <project.name>moutan</project.name>
+                <moutan.mainClass>com.baixing.bi.topology.MoutanTopology</moutan.mainClass>
+                <package.environment>test</package.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>moutan-online</id>
+            <properties>
+                <project.name>moutan</project.name>
+                <moutan.mainClass>com.baixing.bi.topology.MoutanTopology</moutan.mainClass>
+                <package.environment>product</package.environment>
+            </properties>
+        </profile>
+    </profiles>
 
         <build>
             <plugins>
@@ -118,26 +148,26 @@
                                 <transformers>
                                     <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
                                     <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                        <mainClass>com.baixing.bi.topology.GaryTopology</mainClass>
+                                        <mainClass>${moutan.mainClass}</mainClass>
                                     </transformer>
                                 </transformers>
                             </configuration>
                         </execution>
                     </executions>
                 </plugin>
-                <plugin>
-                    <artifactId>maven-assembly-plugin</artifactId>
-                    <configuration>
-                        <descriptorRefs>
-                            <descriptorRef>jar-with-dependencies</descriptorRef>
-                        </descriptorRefs>
-                        <archive>
-                            <manifest>
-                                <mainClass>com.baixing.bi.topology.GaryTopology</mainClass>
-                            </manifest>
-                        </archive>
-                    </configuration>
-                </plugin>
+                <!--<plugin>-->
+                    <!--<artifactId>maven-assembly-plugin</artifactId>-->
+                    <!--<configuration>-->
+                        <!--<descriptorRefs>-->
+                            <!--<descriptorRef>jar-with-dependencies</descriptorRef>-->
+                        <!--</descriptorRefs>-->
+                        <!--<archive>-->
+                            <!--<manifest>-->
+                                <!--<mainClass>com.baixing.bi.topology.GaryTopology</mainClass>-->
+                            <!--</manifest>-->
+                        <!--</archive>-->
+                    <!--</configuration>-->
+                <!--</plugin>-->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -145,6 +175,31 @@
                         <source>1.6</source>
                         <target>1.6</target>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version>
+                    <executions>
+                        <execution>
+                            <id>copy-resources</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>copy-resources</goal>
+                            </goals>
+                            <configuration>
+                                <overwrite>true</overwrite>
+                                <outputDirectory>target/classes</outputDirectory>
+                                <resources>
+                                    <resource>
+                                        <!-- 指定resources插件处理哪个目录下的资源文件 -->
+                                        <directory>conf/${project.name}/${package.environment}</directory>
+                                        <filtering>true</filtering>
+                                    </resource>
+                                </resources>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </build>

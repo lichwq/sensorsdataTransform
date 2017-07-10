@@ -1,7 +1,7 @@
 package com.baixng.bi.event;
 
-import com.baixing.bi.event.Category;
-import com.baixing.bi.event.City;
+import com.baixing.bi.mapping.Category;
+import com.baixing.bi.mapping.City;
 import org.junit.Assert;
 import org.junit.Test;
 

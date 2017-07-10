@@ -1,6 +1,6 @@
 package com.baixng.bi.event;
 
-import com.baixing.bi.event.Area;
+import com.baixing.bi.mapping.Area;
 import org.junit.Assert;
 import org.junit.Test;
 
