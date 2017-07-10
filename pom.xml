@@ -108,12 +108,13 @@
             <properties>
                 <project.name>moutan</project.name>
                 <moutan.mainClass>com.baixing.bi.topology.MoutanTopology</moutan.mainClass>
-                <package.environment>product</package.environment>
+                <package.environment>online</package.environment>
             </properties>
         </profile>
     </profiles>
 
         <build>
+            <finalName>${artifactId}-${project.name}-${package.environment}-${version}</finalName>
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
