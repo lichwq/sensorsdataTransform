@@ -1,6 +1,6 @@
 package com.baixng.bi.event;
 
-import com.baixing.bi.event.MoutanCategory;
+import com.baixing.bi.mapping.MoutanCategory;
 import org.apache.thrift.TException;
 import org.junit.AfterClass;
 import org.junit.Assert;

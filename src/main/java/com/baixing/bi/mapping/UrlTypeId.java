@@ -1,5 +1,6 @@
-package com.baixing.bi.event;
+package com.baixing.bi.mapping;
 
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
@@ -13,7 +14,7 @@ import java.util.regex.Pattern;
  */
 public class UrlTypeId {
 
-private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(UrlTypeId.class);
+    private static final Logger LOG = LoggerFactory.getLogger(UrlTypeId.class);
 
     protected static final String INVALID_URL_TYPE = "99";
     protected static final String DEFAULT_URL_TYPE = "9";

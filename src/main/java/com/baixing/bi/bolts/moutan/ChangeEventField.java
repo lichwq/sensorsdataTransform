@@ -1,6 +1,7 @@
-package com.baixing.bi.bolts;
+package com.baixing.bi.bolts.moutan;
 
 import com.baixing.bi.format.Event;
+import com.baixing.bi.format.EventField;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -13,39 +14,31 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
+import static com.baixing.bi.format.Constant.EVENT_FIELD_ALIAS_FILE;
 
 /**
- * Created by zjl on 2017/5/31.
+ * Created by zjl on 2017/7/3.
  */
-public class EventFormat extends BaseRichBolt {
-
-    private static final Logger LOG = LoggerFactory.getLogger(EventFormat.class);
+public class ChangeEventField extends BaseRichBolt {
+    private static final Logger LOG = LoggerFactory.getLogger(ChangeEventField.class);
     private OutputCollector collector;
+    private EventField eventField;
 
     public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
         this.collector = collector;
+        this.eventField = new EventField();
+        eventField.loadConfig(stormConf.get(EVENT_FIELD_ALIAS_FILE).toString());
     }
 
-    /**
-     * 将json转化为Event对象
-     * 使用 DefaultRecordTranslator
-     * 默认返回的
-     * 0->topic
-     * 1->partition
-     * 2->offset
-     * 3->key
-     * 4->value
-     * */
     public void execute(Tuple input) {
-        String line = input.getString(4);
-        Event event = Event.fromJson(line);
-        if (null != event) {
-            collector.emit(input, new Values(event));
-        }
+        Event event = (Event) input.getValue(0);
+        eventField.changeFields(event);
+//        LOG.info("ChangeEventField " + event.toString());
+        collector.emit(input, new Values(event));
         collector.ack(input);
     }
 
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
-        declarer.declare(new Fields("eventFormat"));
+        declarer.declare(new Fields("changeEventField"));
     }
 }

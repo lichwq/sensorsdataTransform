@@ -1,6 +1,6 @@
 package com.baixing.bi.bolts.mapping;
 
-import com.baixing.bi.event.Gary;
+import com.baixing.bi.format.Gary;
 import org.apache.storm.kafka.bolt.mapper.TupleToKafkaMapper;
 import org.apache.storm.tuple.Tuple;
 

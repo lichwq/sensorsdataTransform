@@ -1,6 +1,7 @@
-package com.baixing.bi.bolts;
+package com.baixing.bi.bolts.moutan;
 
 import com.baixing.bi.format.Event;
+import com.baixing.bi.format.EventDataFormat;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -13,39 +14,32 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
+import static com.baixing.bi.format.Constant.EVENT_DATA_FORMAT_FILE;
 
 /**
- * Created by zjl on 2017/5/31.
+ * Created by zjl on 2017/7/4.
+ * 检测从主站打点过来的数据是不是完整，如果不完整就抛弃
  */
-public class EventFormat extends BaseRichBolt {
-
-    private static final Logger LOG = LoggerFactory.getLogger(EventFormat.class);
+public class SecondFieldCheck extends BaseRichBolt {
+    private static final Logger LOG = LoggerFactory.getLogger(BaseRichBolt.class);
     private OutputCollector collector;
+    private EventDataFormat eventDataFormat;
 
     public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
         this.collector = collector;
-    }
+        eventDataFormat = new EventDataFormat();
+        eventDataFormat.loadConfig(stormConf.get(EVENT_DATA_FORMAT_FILE).toString());
 
-    /**
-     * 将json转化为Event对象
-     * 使用 DefaultRecordTranslator
-     * 默认返回的
-     * 0->topic
-     * 1->partition
-     * 2->offset
-     * 3->key
-     * 4->value
-     * */
+    }
     public void execute(Tuple input) {
-        String line = input.getString(4);
-        Event event = Event.fromJson(line);
-        if (null != event) {
+        Event event = (Event) input.getValue(0);
+        if (eventDataFormat.checkData(event,false)) {
             collector.emit(input, new Values(event));
         }
         collector.ack(input);
     }
 
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
-        declarer.declare(new Fields("eventFormat"));
+        declarer.declare(new Fields("secondFieldCheck"));
     }
 }

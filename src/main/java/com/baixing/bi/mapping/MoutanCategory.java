@@ -1,4 +1,4 @@
-package com.baixing.bi.event;
+package com.baixing.bi.mapping;
 
 import com.baixing.thrift.moutan.Moutan;
 import com.baixing.thrift.moutan.TCategory;

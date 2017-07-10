@@ -1,4 +1,4 @@
-package com.baixing.bi.event;
+package com.baixing.bi.mapping;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static com.baixing.bi.event.Constant.*;
+import static com.baixing.bi.mapping.Constant.*;
 
 /**
  * Created by zjl on 2017/5/31.
@@ -27,7 +27,7 @@ public class Area {
         areaMappingHead.put(AREA_ID, 0);
         areaMappingHead.put(AREA_CN, 1);
         areaMappingHead.put(CITY_CN, 2);
-        areaMappingHead.put(SHENG_CN, 3);
+        areaMappingHead.put(PROVINCE_CN, 3);
     }
 
     public Area() {}

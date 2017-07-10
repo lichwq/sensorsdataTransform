@@ -1,6 +1,6 @@
 package com.baixng.bi.event;
 
-import com.baixing.bi.event.Event;
+import com.baixing.bi.format.Event;
 import org.junit.Test;
 
 /**

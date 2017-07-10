@@ -1,6 +1,6 @@
 package com.baixing.bi.bolts.moutan;
 
-import com.baixing.bi.event.Event;
+import com.baixing.bi.format.Event;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-import static com.baixing.bi.event.Constant.MOUNTA_PROJECT_NAME;
+import static com.baixing.bi.mapping.Constant.MOUNTA_PROJECT_NAME;
 
 /**
  * Created by zjl on 2017/5/31.

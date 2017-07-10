@@ -1,7 +1,7 @@
 package com.baixing.bi.bolts.moutan;
 
-import com.baixing.bi.event.Area;
-import com.baixing.bi.event.Event;
+import com.baixing.bi.mapping.Area;
+import com.baixing.bi.format.Event;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-import static com.baixing.bi.event.Constant.*;
+import static com.baixing.bi.mapping.Constant.*;
 
 /**
  * Created by zjl on 2017/6/12.
@@ -43,13 +43,13 @@ public class AreaMapping extends BaseRichBolt {
             if (null != areaId) {
                 event.put(AREA_CN, area.getFiled(areaId, AREA_CN));
                 event.put(CITY_CN, area.getFiled(areaId, CITY_CN));
-                event.put(SHENG_CN, area.getFiled(areaId, SHENG_CN));
+                event.put(PROVINCE_CN, area.getFiled(areaId, PROVINCE_CN));
             }
         } catch (Exception e) {
             String err = String.format("get area error, json: %s, err: %s", event.toString(), e.getMessage());
             LOG.error(err);
         }
-
+//        LOG.info("AreaMapping " + event.toString());
         collector.emit(input, new Values(event));
         collector.ack(input);
     }

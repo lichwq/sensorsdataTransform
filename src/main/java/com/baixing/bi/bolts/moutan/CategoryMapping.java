@@ -1,7 +1,7 @@
 package com.baixing.bi.bolts.moutan;
 
-import com.baixing.bi.event.Event;
-import com.baixing.bi.event.MoutanCategory;
+import com.baixing.bi.format.Event;
+import com.baixing.bi.mapping.MoutanCategory;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.IRichBolt;
@@ -14,12 +14,12 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-import static com.baixing.bi.event.Constant.CATEGORY_CN;
-import static com.baixing.bi.event.Constant.MOUTAN_THRIFT_URL;
+import static com.baixing.bi.mapping.Constant.CATEGORY_CN;
+import static com.baixing.bi.mapping.Constant.MOUTAN_THRIFT_URL;
 
 /**
  * Created by zjl on 2017/6/12.
- * 困意兔八哥色鬼
+ *
  */
 public class CategoryMapping implements IRichBolt {
     private static final Logger LOG = LoggerFactory.getLogger(CategoryMapping.class);
@@ -30,9 +30,7 @@ public class CategoryMapping implements IRichBolt {
         this.collector = collector;
         moutanCategory = new MoutanCategory((String)stormConf.get(MOUTAN_THRIFT_URL));
         moutanCategory.init();
-
     }
-
 
     public void execute(Tuple input) {
         Event event = (Event) input.getValue(0);
@@ -49,7 +47,7 @@ public class CategoryMapping implements IRichBolt {
             String err = String.format("get category error, json: %s, err: %s", event.toString(), e.getMessage());
             LOG.error(err);
         }
-
+//        LOG.info("CategoryMapping " + event.toString());
         collector.emit(input, new Values(event));
         collector.ack(input);
     }

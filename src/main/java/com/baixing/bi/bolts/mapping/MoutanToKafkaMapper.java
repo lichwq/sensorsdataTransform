@@ -1,6 +1,6 @@
 package com.baixing.bi.bolts.mapping;
 
-import com.baixing.bi.event.SensorInput;
+import com.baixing.bi.format.SensorInput;
 import org.apache.storm.kafka.bolt.mapper.TupleToKafkaMapper;
 import org.apache.storm.tuple.Tuple;
 

@@ -17,9 +17,10 @@ import org.apache.storm.topology.TopologyBuilder;
 
 import java.util.Properties;
 
-import static com.baixing.bi.event.Constant.AREA_MAPPING_FILE;
-import static com.baixing.bi.event.Constant.MOUTAN_THRIFT_URL;
-import static com.baixing.bi.event.Constant.SENSOR_DATA_PROJECT;
+import static com.baixing.bi.format.Constant.EVENT_DATA_FORMAT_FILE;
+import static com.baixing.bi.format.Constant.EVENT_FIELD_ALIAS_FILE;
+import static com.baixing.bi.format.Constant.EVENT_TYPE_ALIAS_FILE;
+import static com.baixing.bi.mapping.Constant.*;
 import static org.apache.storm.StormSubmitter.submitTopology;
 
 /**
@@ -30,11 +31,13 @@ public class MoutanTopology {
     public static void main(String[] args) throws InterruptedException, InvalidTopologyException, AuthorizationException,
             AlreadyAliveException {
         // online 为线上模式, dev 为开发模式
-        String mode = "test";
+        // 使用test的时候一定要检查配置中的project
+//        String mode = "test";
 
         ProjectProperties projectProperties = new ProjectProperties();
-        projectProperties.loadProperties("moutan", mode);
+        projectProperties.loadProperties();
 
+        String mode =  projectProperties.getProperty("mode");
         String bootstrapServers = projectProperties.getProperty("kafkaBootstrapServers");
         String[] topic = projectProperties.getProperty("kafkaConsumerTopic").split(",");
         String consumerGroupId = projectProperties.getProperty("kafkaConsumerGroupId");
@@ -48,13 +51,20 @@ public class MoutanTopology {
         tp.setSpout("moutan_storm", new KafkaSpout<String, String>(kafkaSpoutConfig));
         tp.setBolt("event_format", new EventFormat()).shuffleGrouping("moutan_storm");
         tp.setBolt("moutan_filter", new Filter()).shuffleGrouping("event_format");
-        tp.setBolt("area_mapping", new AreaMapping()).shuffleGrouping("moutan_filter");
-        tp.setBolt("site_mapping", new SiteMapping()).shuffleGrouping("area_mapping");
-        tp.setBolt("category_mapping", new CategoryMapping()).shuffleGrouping("site_mapping");
-        tp.setBolt("moutan_transform", new Transform()).shuffleGrouping("category_mapping");
+        tp.setBolt("change_type", new ChangeType()).shuffleGrouping("moutan_filter");
+        tp.setBolt("event_type_filter", new EventTypeFilter()).shuffleGrouping("change_type");
+        tp.setBolt("change_evnet_field", new ChangeEventField()).shuffleGrouping("event_type_filter");
+        tp.setBolt("add_sensor_keep_field", new SensorKeepField()).shuffleGrouping("change_evnet_field");
+        tp.setBolt("first_field_check", new FirstFieldCheck()).shuffleGrouping("add_sensor_keep_field");
+        tp.setBolt("area_mapping", new AreaMapping()).shuffleGrouping("first_field_check");
+        // tp.setBolt("site_mapping", new SiteMapping()).shuffleGrouping("area_mapping");
+        tp.setBolt("category_mapping", new CategoryMapping()).shuffleGrouping("area_mapping");
+        //tp.setBolt("add_sensor_keep_field", new SensorKeepField()).shuffleGrouping("category_mapping");
+        tp.setBolt("second_field_check", new SecondFieldCheck()).shuffleGrouping("category_mapping");
+        tp.setBolt("moutan_transform", new Transform()).shuffleGrouping("second_field_check");
 
         if (mode.equals("dev")) {
-            tp.setBolt("moutan_print", new MoutanPrint()).shuffleGrouping("moutan_transform");
+//            tp.setBolt("moutan_print", new MoutanPrint()).shuffleGrouping("moutan_transform");
 
         } else if (mode.equals("online") || mode.equals("test")) {
             Properties props = new Properties();
@@ -78,7 +88,9 @@ public class MoutanTopology {
         conf.put(MOUTAN_THRIFT_URL, projectProperties.getProperty("thriftUrl"));
         conf.put(AREA_MAPPING_FILE,  projectProperties.getProperty("areMappingFile"));
         conf.put(SENSOR_DATA_PROJECT,  projectProperties.getProperty("sensorDataProject"));
-
+        conf.put(EVENT_DATA_FORMAT_FILE, projectProperties.getProperty("eventDataFormatFile"));
+        conf.put(EVENT_TYPE_ALIAS_FILE,  projectProperties.getProperty("eventTypeAliasFile"));
+        conf.put(EVENT_FIELD_ALIAS_FILE, projectProperties.getProperty("eventFieldAliasFile"));
         if (mode.equals("dev") || mode.equals("test")) {
 
             LocalCluster cluster = new LocalCluster();
@@ -87,6 +99,7 @@ public class MoutanTopology {
             cluster.shutdown();
 
         } else if (mode.equals("online")) {
+
             submitTopology(projectProperties.getProperty("stormTopologyName"), conf, tp.createTopology());
         }
 

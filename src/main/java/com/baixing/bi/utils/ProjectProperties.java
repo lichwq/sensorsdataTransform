@@ -18,8 +18,20 @@ public class ProjectProperties {
         properties = new Properties();
     }
 
-    public void loadProperties(String project, String mode) {
-        StringBuilder filePath = new StringBuilder("/").append(project).append("/").append(mode).append(".properties");
+    public void loadProperties() {
+        StringBuilder filePath = new StringBuilder("/").append("config.properties");
+        Properties pps = new Properties();
+        InputStream in = null;
+        in = this.getClass().getResourceAsStream(filePath.toString());
+        try {
+            properties.load(in);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void loadProperties(String path) {
+        StringBuilder filePath = new StringBuilder("/").append(path);
         Properties pps = new Properties();
         InputStream in = null;
         in = this.getClass().getResourceAsStream(filePath.toString());

@@ -1,4 +1,4 @@
-package com.baixing.bi.event;
+package com.baixing.bi.mapping;
 
 import com.baixing.bi.utils.ThriftClient;
 import com.baixing.thrift.moutan.Moutan;
@@ -43,14 +43,12 @@ public class Sites {
         try {
             tSite = getOrUpdateSite(siteId);
         } catch (TException e) {
-            LOG.error(e.getMessage());
+            LOG.error("getSite error + " + e.getMessage());
+            return null;
         }
 
-        if (null != tSite) {
-            return tSite.getTitle();
-        } else {
-            return "";
-        }
+        return tSite.getTitle();
+
     }
 //
 //    public String getAreaId(String siteId) {

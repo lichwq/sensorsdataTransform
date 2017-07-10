@@ -1,6 +1,6 @@
 package com.baixing.bi.bolts;
 
-import com.baixing.bi.event.Gary;
+import com.baixing.bi.format.Gary;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
