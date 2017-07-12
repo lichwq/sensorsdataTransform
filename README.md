@@ -31,31 +31,25 @@
 
 
 ## 编译命令
-在对应的topology中设置是打包dev环境，还是online环境。
+在对应的topology中设置是打包dev环境，test环境，还是online环境。
 例如motan打包为线上环境:
-```java
-  String mode = "online";
 
-  ProjectProperties projectProperties = new ProjectProperties();
-  projectProperties.loadProperties("moutan", mode);
-
-```
 ```java
-mvn clean install -DskipTests  
+mvn clean install -DskipTests  -Pmoutan-online
 ```
 
 ## 部署
 
 ```java
-scp target/sensorsdataTransform-1.0-SNAPSHOT.jar deploy@sha2hb08:/home/deploy/zhangjiali/ 
+scp target/sensorsdataTransform-moutan-online-1.0-SNAPSHOT.jar deploy@sha2hb08:/home/deploy/zhangjiali/ 
 ```
 
 ## 启动
 
-1. 在 sha2hb08:18080 上停止掉对应的topology
+1. 在 http://sha2hb08:18080 上停止掉对应的topology
 2. 登录 deploy@sha2hb08:/home/deploy/zhangjiali/ 
 3. 运行 
 
 ```java
- storm jar sensorsdataTransform-1.0-SNAPSHOT.jar com.baixing.bi.topology.MoutanTopology
+ storm jar sensorsdataTransform-moutan-online-1.0-SNAPSHOT.jar com.baixing.bi.topology.MoutanTopology
 ```
