@@ -84,22 +84,43 @@
 
     <profiles>
         <profile>
+            <id>gary-dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <project.name>gary</project.name>
+                <project.mainClass>com.baixing.bi.topology.GaryTopology</project.mainClass>
+                <package.environment>dev</package.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>gary-test</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <project.name>gary</project.name>
+                <project.mainClass>com.baixing.bi.topology.GaryTopology</project.mainClass>
+                <package.environment>test</package.environment>
+            </properties>
+        </profile>
+        <profile>
             <id>moutan-dev</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <project.name>moutan</project.name>
-                <moutan.mainClass>com.baixing.bi.topology.MoutanTopology</moutan.mainClass>
+                <project.mainClass>com.baixing.bi.topology.MoutanTopology</project.mainClass>
                 <package.environment>dev</package.environment>
-
             </properties>
         </profile>
         <profile>
             <id>moutan-test</id>
             <properties>
                 <project.name>moutan</project.name>
-                <moutan.mainClass>com.baixing.bi.topology.MoutanTopology</moutan.mainClass>
+                <project.mainClass>com.baixing.bi.topology.MoutanTopology</project.mainClass>
                 <package.environment>test</package.environment>
             </properties>
         </profile>
@@ -107,7 +128,7 @@
             <id>moutan-online</id>
             <properties>
                 <project.name>moutan</project.name>
-                <moutan.mainClass>com.baixing.bi.topology.MoutanTopology</moutan.mainClass>
+                <project.mainClass>com.baixing.bi.topology.MoutanTopology</project.mainClass>
                 <package.environment>online</package.environment>
             </properties>
         </profile>
@@ -149,7 +170,7 @@
                                 <transformers>
                                     <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
                                     <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                        <mainClass>${moutan.mainClass}</mainClass>
+                                        <mainClass>${project.mainClass}</mainClass>
                                     </transformer>
                                 </transformers>
                             </configuration>

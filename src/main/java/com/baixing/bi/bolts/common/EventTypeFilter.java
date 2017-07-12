@@ -1,7 +1,7 @@
-package com.baixing.bi.bolts.moutan;
+package com.baixing.bi.bolts.common;
 
 import com.baixing.bi.format.Event;
-import com.baixing.bi.format.EventDataFormat;
+import com.baixing.bi.format.EventWhiteList;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -17,29 +17,30 @@ import java.util.Map;
 import static com.baixing.bi.format.Constant.EVENT_DATA_FORMAT_FILE;
 
 /**
- * Created by zjl on 2017/7/4.
- * 检测从主站打点过来的数据是不是完整，如果不完整就抛弃
+ * Created by zjl on 2017/7/3.
  */
-public class SecondFieldCheck extends BaseRichBolt {
-    private static final Logger LOG = LoggerFactory.getLogger(BaseRichBolt.class);
+public class EventTypeFilter extends BaseRichBolt {
+    private static final Logger LOG = LoggerFactory.getLogger(EventTypeFilter.class);
     private OutputCollector collector;
-    private EventDataFormat eventDataFormat;
+    private EventWhiteList eventWhiteList;
 
     public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
         this.collector = collector;
-        eventDataFormat = new EventDataFormat();
-        eventDataFormat.loadConfig(stormConf.get(EVENT_DATA_FORMAT_FILE).toString());
-
+        this.eventWhiteList = new EventWhiteList();
+        eventWhiteList.loadConfig(stormConf.get(EVENT_DATA_FORMAT_FILE).toString());
     }
+
     public void execute(Tuple input) {
         Event event = (Event) input.getValue(0);
-        if (eventDataFormat.checkData(event,false)) {
+
+        if (eventWhiteList.isInWhilteList(event.getType())) {
+//            LOG.info("GaryTypeFilter: " + event.toString());
             collector.emit(input, new Values(event));
         }
         collector.ack(input);
     }
 
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
-        declarer.declare(new Fields("secondFieldCheck"));
+        declarer.declare(new Fields("eventTypeFilter"));
     }
 }

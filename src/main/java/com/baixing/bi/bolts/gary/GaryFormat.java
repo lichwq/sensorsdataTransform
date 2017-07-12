@@ -1,4 +1,4 @@
-package com.baixing.bi.bolts;
+package com.baixing.bi.bolts.gary;
 
 import com.baixing.bi.format.Gary;
 import org.apache.storm.task.OutputCollector;
@@ -38,6 +38,8 @@ public class GaryFormat extends BaseRichBolt {
     * */
     public void execute(Tuple input) {
         String line = input.getString(4);
+//        LOG.info(input.toString());
+//        LOG.info("GaryFormat line: " + line);
         Gary gary = Gary.fromLine(line);
         if (gary != null) {
             collector.emit(input, new Values(gary));

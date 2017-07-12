@@ -1,7 +1,7 @@
-package com.baixing.bi.bolts.moutan;
+package com.baixing.bi.bolts.event;
 
 import com.baixing.bi.format.Event;
-import com.baixing.bi.format.EventDataFormat;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -12,35 +12,43 @@ import org.apache.storm.tuple.Values;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.HashSet;
 import java.util.Map;
-
-import static com.baixing.bi.format.Constant.EVENT_DATA_FORMAT_FILE;
+import java.util.Set;
 
 /**
- * Created by zjl on 2017/7/4.
- * 检测从主站打点过来的数据是不是完整，如果不完整就抛弃
+ * Created by zjl on 2017/5/31.
+ * Event过滤
  */
-public class FirstFieldCheck extends BaseRichBolt {
+public class EventFilter extends BaseRichBolt{
     private static final Logger LOG = LoggerFactory.getLogger(BaseRichBolt.class);
     private OutputCollector collector;
-    private EventDataFormat eventDataFormat;
+    private Set<String> whiteList;
+    private static final String DELIMITER = ",";
 
+    /**
+     * 通过白名单做过滤
+     */
     public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
+        String str = stormConf.get("whiteList").toString();
+        String[] arr = str.split(DELIMITER);
+        whiteList = new HashSet<String>();
+        for (String name: arr) {
+            whiteList.add(StringUtils.strip(name));
+        }
+        LOG.info(whiteList.toString());
         this.collector = collector;
-        eventDataFormat = new EventDataFormat();
-        eventDataFormat.loadConfig(stormConf.get(EVENT_DATA_FORMAT_FILE).toString());
-
     }
+
     public void execute(Tuple input) {
         Event event = (Event) input.getValue(0);
-        if (eventDataFormat.checkData(event,true)) {
+        if (whiteList.contains(event.getType())) {
             collector.emit(input, new Values(event));
         }
         collector.ack(input);
     }
 
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
-        declarer.declare(new Fields("firstFieldCheck"));
+        declarer.declare(new Fields("eventFilter"));
     }
 }
-

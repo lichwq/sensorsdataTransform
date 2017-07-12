@@ -1,6 +1,7 @@
 package com.baixing.bi.topology;
 
-import com.baixing.bi.bolts.EventFormat;
+import com.baixing.bi.bolts.common.*;
+import com.baixing.bi.bolts.event.EventFormat;
 import com.baixing.bi.bolts.mapping.MoutanToKafkaMapper;
 import com.baixing.bi.bolts.moutan.*;
 import com.baixing.bi.utils.ProjectProperties;
@@ -17,9 +18,7 @@ import org.apache.storm.topology.TopologyBuilder;
 
 import java.util.Properties;
 
-import static com.baixing.bi.format.Constant.EVENT_DATA_FORMAT_FILE;
-import static com.baixing.bi.format.Constant.EVENT_FIELD_ALIAS_FILE;
-import static com.baixing.bi.format.Constant.EVENT_TYPE_ALIAS_FILE;
+import static com.baixing.bi.format.Constant.*;
 import static com.baixing.bi.mapping.Constant.*;
 import static org.apache.storm.StormSubmitter.submitTopology;
 
@@ -30,9 +29,6 @@ public class MoutanTopology {
 
     public static void main(String[] args) throws InterruptedException, InvalidTopologyException, AuthorizationException,
             AlreadyAliveException {
-        // online 为线上模式, dev 为开发模式
-        // 使用test的时候一定要检查配置中的project
-//        String mode = "test";
 
         ProjectProperties projectProperties = new ProjectProperties();
         projectProperties.loadProperties();
@@ -57,14 +53,12 @@ public class MoutanTopology {
         tp.setBolt("add_sensor_keep_field", new SensorKeepField()).shuffleGrouping("change_evnet_field");
         tp.setBolt("first_field_check", new FirstFieldCheck()).shuffleGrouping("add_sensor_keep_field");
         tp.setBolt("area_mapping", new AreaMapping()).shuffleGrouping("first_field_check");
-        // tp.setBolt("site_mapping", new SiteMapping()).shuffleGrouping("area_mapping");
         tp.setBolt("category_mapping", new CategoryMapping()).shuffleGrouping("area_mapping");
-        //tp.setBolt("add_sensor_keep_field", new SensorKeepField()).shuffleGrouping("category_mapping");
         tp.setBolt("second_field_check", new SecondFieldCheck()).shuffleGrouping("category_mapping");
         tp.setBolt("moutan_transform", new Transform()).shuffleGrouping("second_field_check");
 
         if (mode.equals("dev")) {
-//            tp.setBolt("moutan_print", new MoutanPrint()).shuffleGrouping("moutan_transform");
+            tp.setBolt("moutan_print", new MoutanPrint()).shuffleGrouping("moutan_transform");
 
         } else if (mode.equals("online") || mode.equals("test")) {
             Properties props = new Properties();

@@ -1,17 +1,17 @@
 package com.baixing.bi.format;
 
-import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Created by zjl on 2017/5/15.
  */
-public class Gary {
+public class Gary extends Event{
 
     private static final Logger LOG = LoggerFactory.getLogger(Gary.class);
 
@@ -25,18 +25,16 @@ public class Gary {
             "from_div", "latlng", "latlng_city"
     };
 
-
-    private Map<String, String> kv;
-
     public Gary() {}
 
-    public Gary(Map<String, String> kv) {
-        this.kv = kv;
+    public Gary(String eventType, Long ts, Map<Object,Object> msg) {
+        super(eventType, ts, msg);
     }
+
 
     public static Gary fromLine(String line)  {
 
-        Map<String, String> kv = new HashMap<String, String>();
+        Map<Object, Object> kv = new HashMap<Object, Object>();
         String[] pieces = line.split(",");
 
         for (int i = 0; i < FIELDS.length; i++) {
@@ -52,35 +50,19 @@ public class Gary {
             kv.put(FIELDS[i], StringUtils.strip(pieces[i], "\""));
         }
 
-        return new Gary(kv);
+        String toUrl = kv.get("to_url").toString().trim();
+        kv.put("platform", getPlatform(toUrl));
+        Long ts = Timestamp.valueOf(kv.get("arrive_time").toString()).getTime();
+        return new Gary("gary",ts, kv);
+
     }
 
-    public String getField(String name) {
-        return kv.get(name);
+    public static String getPlatform(String url) {
+        if (url.contains("com/m/") || url.contains("com/wap/")) {
+            return "wap";
+        } else {
+            return "web";
+        }
     }
 
-    public String toJson() {
-        String jsonString = JSON.toJSONString(kv);
-        return jsonString;
-    }
-
-
-    public Map<String, String> getKv() {
-        return kv;
-    }
-
-    public void setKv(Map<String, String> kv) {
-        this.kv = kv;
-    }
-
-    public void put(String key, String value) {
-        this.kv.put(key, value);
-    }
-
-    @Override
-    public String toString() {
-        return "Gary{" +
-                "kv=" + kv +
-                '}';
-    }
 }

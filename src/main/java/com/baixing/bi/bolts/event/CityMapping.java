@@ -1,4 +1,4 @@
-package com.baixing.bi.bolts;
+package com.baixing.bi.bolts.event;
 
 import com.baixing.bi.mapping.City;
 import com.baixing.bi.format.Gary;
@@ -37,7 +37,7 @@ public class  CityMapping extends BaseRichBolt {
      * */
     public void execute(Tuple input) {
         Gary gary = (Gary) input.getValue(0);
-        String cityNameEn = gary.getField("city_name_en");
+        String cityNameEn = gary.getField("city_name_en").toString();
         if (cityNameEn != null) {
             gary.put("city_name_cn", city.getFiled(cityNameEn, "cityNameCn"));
             gary.put("sheng_name_cn", city.getFiled(cityNameEn, "shengNameCn"));

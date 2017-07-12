@@ -1,4 +1,4 @@
-package com.baixing.bi.bolts;
+package com.baixing.bi.bolts.gary;
 
 import com.baixing.bi.format.Gary;
 import com.baixing.bi.mapping.UrlTypeId;
@@ -15,6 +15,8 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.Map;
 
+import static com.baixing.bi.mapping.Constant.URL_TYPE_ID_FILE;
+
 /**
  * Created by zjl on 2017/5/25.
  * UrlType的映射
@@ -29,7 +31,7 @@ public class UrlTypeIdMapping implements IRichBolt {
         this.collector = collector;
         urlTypeId = new UrlTypeId();
 
-        String fileName = stormConf.get("urlTypeIdFile").toString();
+        String fileName = stormConf.get(URL_TYPE_ID_FILE).toString();
         try {
             urlTypeId.loadConfigFile(fileName);
         } catch (IOException e) {
@@ -41,12 +43,12 @@ public class UrlTypeIdMapping implements IRichBolt {
     public void execute(Tuple input) {
         Gary gary = (Gary) input.getValue(0);
 
-        String toUrl = gary.getField("to_url");
+        String toUrl = gary.getField("to_url").toString();
         if (null != toUrl) {
             gary.put("to_url_type_id", urlTypeId.getType(toUrl));
         }
 
-        String fromUrl = gary.getField("from_url");
+        String fromUrl = gary.getField("from_url").toString();
         if (null != fromUrl) {
             gary.put("from_url_type_id", urlTypeId.getType(fromUrl));
         }

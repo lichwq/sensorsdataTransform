@@ -22,6 +22,7 @@ public class Constant {
     public static final String AREA_MAPPING_FILE = "areMappingFile";
     public static final String CATEGORY_MAPPING_FILE = "categoryMappingFile";
     public static final String MOUTAN_THRIFT_URL = "moutanThriftUrl";
+    public static final String URL_TYPE_ID_FILE = "urlTypeIdFile";
 
 
 }

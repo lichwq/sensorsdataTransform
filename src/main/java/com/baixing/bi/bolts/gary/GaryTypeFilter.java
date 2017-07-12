@@ -1,6 +1,6 @@
-package com.baixing.bi.bolts;
+package com.baixing.bi.bolts.gary;
 
-import com.baixing.bi.format.Event;
+import com.baixing.bi.format.Gary;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -13,39 +13,30 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-
 /**
- * Created by zjl on 2017/5/31.
+ * Created by zjl on 2017/7/11.
  */
-public class EventFormat extends BaseRichBolt {
+public class GaryTypeFilter extends BaseRichBolt {
 
-    private static final Logger LOG = LoggerFactory.getLogger(EventFormat.class);
+    private static final Logger LOG = LoggerFactory.getLogger(GaryTypeFilter.class);
     private OutputCollector collector;
-
+    @Override
     public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
         this.collector = collector;
+
     }
 
-    /**
-     * 将json转化为Event对象
-     * 使用 DefaultRecordTranslator
-     * 默认返回的
-     * 0->topic
-     * 1->partition
-     * 2->offset
-     * 3->key
-     * 4->value
-     * */
+    @Override
     public void execute(Tuple input) {
-        String line = input.getString(4);
-        Event event = Event.fromJson(line);
-        if (null != event) {
-            collector.emit(input, new Values(event));
+        Gary gary = (Gary) input.getValue(0);
+        if (gary.getType().equals("viewAd") && gary.getField("platform").equals("wap")) {
+            collector.emit(input, new Values(gary));
         }
         collector.ack(input);
     }
 
+    @Override
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
-        declarer.declare(new Fields("eventFormat"));
+            declarer.declare(new Fields("garyEventTypeFilter"));
     }
 }
