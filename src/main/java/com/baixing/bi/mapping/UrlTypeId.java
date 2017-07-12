@@ -80,12 +80,11 @@ public class UrlTypeId {
             l_oUrlTypePatterns.add(oUrlPartPattern);
         } while(true);
         System.out.println("load success");
-        System.out.println(m_oUrlPatterns.toString());
 
         oUrlTypeConfFileReader.close();
     }
 
-    public  String getType(String sInUrl) {
+    public String getType(String sInUrl) {
 
         Map <String, String> m_oUrlPart = new TreeMap<String, String>();
         m_oUrlPart.put("HOST", "");

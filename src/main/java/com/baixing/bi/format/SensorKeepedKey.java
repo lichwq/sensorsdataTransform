@@ -6,6 +6,7 @@ import java.util.HashMap;
  * Created by zjl on 2017/6/21.
  * 这个类保存了神策的一些保留字段，需要将moutan中所有的消息中的对应的key替换为神策保留key
  */
+@Deprecated
 public class SensorKeepedKey {
 
     private static HashMap<String, String> senseorKeepFiled;

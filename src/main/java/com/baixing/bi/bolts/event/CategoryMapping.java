@@ -1,4 +1,4 @@
-package com.baixing.bi.bolts;
+package com.baixing.bi.bolts.event;
 
 /**
  * Created by zjl on 2017/5/31.

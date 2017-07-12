@@ -1,7 +1,7 @@
-package com.baixing.bi.bolts;
+package com.baixing.bi.bolts.common;
 
-import com.baixing.bi.mapping.City;
 import com.baixing.bi.format.Event;
+import com.baixing.bi.format.EventType;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -14,42 +14,31 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
+import static com.baixing.bi.format.Constant.EVENT_TYPE_ALIAS_FILE;
+
 /**
- * Created by zjl on 2017/5/31.
- * Event 城市映射
+ * Created by zjl on 2017/7/3.
  */
-
-public class EventCityMapping extends BaseRichBolt {
-    private static final Logger LOG = LoggerFactory.getLogger(EventCityMapping.class);
+public class ChangeType extends BaseRichBolt {
+    private static final Logger LOG = LoggerFactory.getLogger(ChangeType.class);
     private OutputCollector collector;
-    private static City city;
-
-
+    private EventType eventType;
 
     public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
         this.collector = collector;
-        city = new City();
-        city.loadConfigFile((String) stormConf.get("cityMappingFile"));
+        this.eventType = new EventType();
+        eventType.loadConfig(stormConf.get(EVENT_TYPE_ALIAS_FILE).toString());
     }
 
-    /**
-     *
-     * 通过city_name_en来获取其它字段，但是
-     * */
     public void execute(Tuple input) {
         Event event = (Event) input.getValue(0);
-        String cityNameEn = (String) event.getField("_city");
-        if (cityNameEn != null) {
-            event.put("_cityNameCn", city.getFiled(cityNameEn, "cityNameCn"));
-            event.put("_shengNameCn", city.getFiled(cityNameEn, "shengNameCn"));
-        }
-
+        eventType.changeType(event);
+//        LOG.info("after change type: " + event.toString());
         collector.emit(input, new Values(event));
         collector.ack(input);
     }
 
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
-        declarer.declare(new Fields("eventAddCity"));
+        declarer.declare(new Fields("changeType"));
     }
-
 }

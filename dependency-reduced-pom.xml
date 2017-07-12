@@ -5,6 +5,7 @@
   <artifactId>sensorsdataTransform</artifactId>
   <version>1.0-SNAPSHOT</version>
   <build>
+    <finalName>${artifactId}-${project.name}-${package.environment}-${version}</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
@@ -18,7 +19,7 @@
               <transformers>
                 <transformer />
                 <transformer>
-                  <mainClass>${moutan.mainClass}</mainClass>
+                  <mainClass>${project.mainClass}</mainClass>
                 </transformer>
               </transformers>
             </configuration>
@@ -79,27 +80,43 @@
   </build>
   <profiles>
     <profile>
+      <id>gary-dev</id>
+      <properties>
+        <project.name>gary</project.name>
+        <package.environment>dev</package.environment>
+        <project.mainClass>com.baixing.bi.topology.GaryTopology</project.mainClass>
+      </properties>
+    </profile>
+    <profile>
+      <id>gary-test</id>
+      <properties>
+        <project.name>gary</project.name>
+        <package.environment>test</package.environment>
+        <project.mainClass>com.baixing.bi.topology.GaryTopology</project.mainClass>
+      </properties>
+    </profile>
+    <profile>
       <id>moutan-dev</id>
       <properties>
         <project.name>moutan</project.name>
-        <moutan.mainClass>com.baixing.bi.topology.MoutanTopology</moutan.mainClass>
         <package.environment>dev</package.environment>
+        <project.mainClass>com.baixing.bi.topology.MoutanTopology</project.mainClass>
       </properties>
     </profile>
     <profile>
       <id>moutan-test</id>
       <properties>
         <project.name>moutan</project.name>
-        <moutan.mainClass>com.baixing.bi.topology.MoutanTopology</moutan.mainClass>
         <package.environment>test</package.environment>
+        <project.mainClass>com.baixing.bi.topology.MoutanTopology</project.mainClass>
       </properties>
     </profile>
     <profile>
       <id>moutan-online</id>
       <properties>
         <project.name>moutan</project.name>
-        <moutan.mainClass>com.baixing.bi.topology.MoutanTopology</moutan.mainClass>
-        <package.environment>product</package.environment>
+        <package.environment>online</package.environment>
+        <project.mainClass>com.baixing.bi.topology.MoutanTopology</project.mainClass>
       </properties>
     </profile>
   </profiles>

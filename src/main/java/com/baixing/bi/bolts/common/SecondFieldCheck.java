@@ -1,7 +1,7 @@
-package com.baixing.bi.bolts.moutan;
+package com.baixing.bi.bolts.common;
 
 import com.baixing.bi.format.Event;
-import com.baixing.bi.format.EventField;
+import com.baixing.bi.format.EventDataFormat;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -14,31 +14,32 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-import static com.baixing.bi.format.Constant.EVENT_FIELD_ALIAS_FILE;
+import static com.baixing.bi.format.Constant.EVENT_DATA_FORMAT_FILE;
 
 /**
- * Created by zjl on 2017/7/3.
+ * Created by zjl on 2017/7/4.
+ * 检测从主站打点过来的数据是不是完整，如果不完整就抛弃
  */
-public class ChangeEventField extends BaseRichBolt {
-    private static final Logger LOG = LoggerFactory.getLogger(ChangeEventField.class);
+public class SecondFieldCheck extends BaseRichBolt {
+    private static final Logger LOG = LoggerFactory.getLogger(BaseRichBolt.class);
     private OutputCollector collector;
-    private EventField eventField;
+    private EventDataFormat eventDataFormat;
 
     public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
         this.collector = collector;
-        this.eventField = new EventField();
-        eventField.loadConfig(stormConf.get(EVENT_FIELD_ALIAS_FILE).toString());
-    }
+        eventDataFormat = new EventDataFormat();
+        eventDataFormat.loadConfig(stormConf.get(EVENT_DATA_FORMAT_FILE).toString());
 
+    }
     public void execute(Tuple input) {
         Event event = (Event) input.getValue(0);
-        eventField.changeFields(event);
-//        LOG.info("ChangeEventField " + event.toString());
-        collector.emit(input, new Values(event));
+        if (eventDataFormat.checkData(event,false)) {
+            collector.emit(input, new Values(event));
+        }
         collector.ack(input);
     }
 
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
-        declarer.declare(new Fields("changeEventField"));
+        declarer.declare(new Fields("secondFieldCheck"));
     }
 }

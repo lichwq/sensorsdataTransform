@@ -1,6 +1,6 @@
-package com.baixing.bi.bolts;
+package com.baixing.bi.bolts.event;
 
-import com.baixing.bi.format.Gary;
+import com.baixing.bi.format.Event;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -12,12 +12,13 @@ import org.slf4j.LoggerFactory;
 import java.util.Map;
 
 /**
- * Created by zjl on 2017/5/24.
- * 主要做测试使用
+ * Created by zjl on 2017/5/31.
+ * 主要做测试用，在屏幕输出
  */
-public class GaryPrint extends BaseRichBolt {
 
-    private static final Logger LOG = LoggerFactory.getLogger(GaryPrint.class);
+public class EventPrint extends BaseRichBolt {
+
+    private static final Logger LOG = LoggerFactory.getLogger(EventPrint.class);
     private OutputCollector collector;
 
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
@@ -29,8 +30,8 @@ public class GaryPrint extends BaseRichBolt {
     }
 
     public void execute(Tuple input) {
-        Gary gary = (Gary) input.getValue(0);
-        LOG.info(gary.toJson());
+        Event event= (Event) input.getValue(0);
+        LOG.info(event.toJson());
         collector.ack(input);
     }
 }

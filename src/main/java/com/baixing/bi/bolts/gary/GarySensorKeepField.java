@@ -1,6 +1,7 @@
-package com.baixing.bi.bolts.moutan;
+package com.baixing.bi.bolts.gary;
 
 import com.baixing.bi.format.Event;
+import com.baixing.bi.format.Gary;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -12,14 +13,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
  * Created by zjl on 2017/7/5.
+ * 后期抽象一下
  */
-public class SensorKeepField extends BaseRichBolt {
-    private static final Logger LOG = LoggerFactory.getLogger(SensorKeepField.class);
+public class GarySensorKeepField extends BaseRichBolt {
+    private static final Logger LOG = LoggerFactory.getLogger(GarySensorKeepField.class);
     private OutputCollector collector;
+
     private static HashMap<String, String> senseorKeepFiled;
     /**
      * Gets distinct id, 如果有bxUserId 使用bxUserId，如果没有，使用trackId
@@ -28,43 +32,44 @@ public class SensorKeepField extends BaseRichBolt {
      * @return the distinct id
      */
     public String getDistinctId(Event event) {
-        Object res =  event.getField("bxUserId") != null ?
-                event.getField("bxUserId"): event.getField("trackId");
+
+        Object res =  event.getField("user_id").equals("0") ? event.getField("track_id") :
+                event.getField("user_id");
+
         return (String)res;
     }
 
     public void addSensorKeepField(Event event) {
         HashMap<Object, Object> msg = (HashMap<Object, Object>) event.getMsg();
         HashMap<Object, Object> add = new HashMap<Object, Object>();
-        for (Object o : msg.entrySet()) {
-            Map.Entry entry = (Map.Entry) o;
+        for (Iterator<Map.Entry<Object, Object>> iterator = msg.entrySet().iterator(); iterator.hasNext();) {
+            final Map.Entry<Object, Object> entry = iterator.next();
             Object key = entry.getKey();
             Object val = entry.getValue();
-            // 神策的保留字段
             if (senseorKeepFiled.containsKey(key)) {
                 Object newKey = senseorKeepFiled.get(key);
                 add.put(newKey, val);
+                iterator.remove();
             }
         }
-
         msg.putAll(add);
         msg.put("distinct_id", getDistinctId(event));
     }
-
 
     public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
         this.collector = collector;
         this.senseorKeepFiled = new HashMap<String, String>();
         this.senseorKeepFiled.put("url", "$url");
         this.senseorKeepFiled.put("ip", "$ip");
-        this.senseorKeepFiled.put("ua", "$user_agent");
+        this.senseorKeepFiled.put("user_agent", "$user_agent");
 
     }
     public void execute(Tuple input) {
-        Event event = (Event) input.getValue(0);
-        addSensorKeepField(event);
-        collector.emit(input, new Values(event));
+        Gary gary = (Gary) input.getValue(0);
+        addSensorKeepField(gary);
+        collector.emit(input, new Values(gary));
         collector.ack(input);
+
     }
 
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
