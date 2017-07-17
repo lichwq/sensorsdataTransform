@@ -1,0 +1,14 @@
+[
+{"type":"bindSucc", "fields":[{"field": "bindMobile", "alias":["mobile"]}]},
+{"type":"contact", "fields":[{"field": "contactMobile", "alias":["mobile"]}]},
+{"type":"openBuy", "fields":[{"field": "buyType", "alias":["type"]},{"field": "payDays", "alias":["days"]}]},
+{"type":"buySucc", "fields":[{"field": "buyType", "alias":["type"]},{"field": "payDays", "alias":["days"]}, {"field": "payPrice", "alias":["price"]}]},
+{"type":"buyFailed", "fields":[{"field": "buyType", "alias":["type"]},{"field": "payDays", "alias":["days"]}, {"field": "payPrice", "alias":["price"]}]},
+{"type":"openWxPay", "fields":[{"field": "buyType", "alias":["type"]},{"field": "payDays", "alias":["days"]}, {"field": "payPrice", "alias":["price"]}]},
+{"type":"closeWxPay", "fields":[{"field": "buyType", "alias":["type"]},{"field": "payDays", "alias":["days"]}, {"field": "payPrice", "alias":["price"]}]},
+{"type":"wxPaySucc", "fields":[{"field": "buyType", "alias":["type"]},{"field": "payDays", "alias":["days"]}, {"field": "payPrice", "alias":["price"]}]},
+{"type":"wxPayFailed", "fields":[{"field": "buyType", "alias":["type"]},{"field": "payDays", "alias":["days"]}, {"field": "payPrice", "alias":["price"]}]},
+{"type":"shareSucc", "fields":[{"field": "shareType", "alias":["type"]}, {"field": "sharePosition", "alias":["position"]}]},
+{"type":"shareCancel", "fields":[{"field": "shareType", "alias":["type"]}, {"field": "sharePosition", "alias":["position"]}]},
+{"type":"shareFail", "fields":[{"field": "shareType", "alias":["type"]}, {"field": "sharePosition", "alias":["position"]}]}
+]

@@ -1,0 +1,6012 @@
+[
+  {
+    "type": "viewHome",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "pageNum"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "loadType"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "viewCategory",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "pageNum"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "loadType"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "viewPost",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "viewJuBao",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "viewMy",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "pageNum"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "loadType"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      }
+    ]
+  },
+  {
+    "type": "openPublish",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isEdit"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "publishSucc",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isEdit"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "publishFail",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isEdit"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "errorCode"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "openBind",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      }
+    ]
+  },
+  {
+    "type": "bindSucc",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bindMobile"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      }
+    ]
+  },
+  {
+    "type": "openBuy",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "srcAction"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "buyType"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "payDays"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "buySucc",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "srcAction"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "buyType"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "payDays"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "payPrice"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "orderId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "quotaRemain"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "buyFailed",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "srcAction"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "errorCode"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "buyType"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "payDays"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "payPrice"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "orderId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "deletePostSucc",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "openCategoryList",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "openAreaList",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "contact",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "contactMobile"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "submitJuBao",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "openOperation",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "openPay",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "openRefresh",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      }
+    ]
+  },
+  {
+    "type": "openTop",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      }
+    ]
+  },
+  {
+    "type": "openEdit",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      }
+    ]
+  },
+  {
+    "type": "openDelete",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "openShare",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "shareSucc",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "shareType"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "sharePosition"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "shareCancel",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "shareType"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "sharePosition"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "shareFail",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "shareType"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "sharePosition"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "openWxPay",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "srcAction"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "buyType"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "payDays"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "payPrice"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "closeWxPay",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "srcAction"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "buyType"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "payDays"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "payPrice"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "wxPaySucc",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "srcAction"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "buyType"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "payDays"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "payPrice"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  },
+  {
+    "type": "wxPayFailed",
+    "msg": [
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "trackId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "bxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "distinct_id"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "wxUserId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "session"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$url"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "referer"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$user_agent"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "$ip"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isAjax"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "isPV"
+      },
+      {
+        "dataType": {
+          "fieldRequired": false,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "srcAction"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "siteId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "postId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "draftId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "buyType"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": false,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "payDays"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": true,
+          "fromRecord": true
+        },
+        "field": "payPrice"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "areaId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "areaCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "cityCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "provinceCn"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": true
+        },
+        "field": "categoryId"
+      },
+      {
+        "dataType": {
+          "fieldRequired": true,
+          "valueRequired": true,
+          "isNumber": false,
+          "fromRecord": false
+        },
+        "field": "categoryCn"
+      }
+    ]
+  }
+]
